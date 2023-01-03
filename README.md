@@ -105,8 +105,9 @@ python3 app.py
 
 Isso irá iniciar a API em http://localhost:8080/produtos/
 
-# Para fazer a paginação da API use a biblioteca requests, e crie o arquivo ***python3 paginacao_api.py*** adicionando o seguinte conteúdo:
+# Para fazer a paginação da API use a biblioteca requests
 
+Crie o arquivo ***python3 paginacao_api.py*** adicionando o seguinte conteúdo:
 
 ```python
 
