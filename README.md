@@ -158,4 +158,4 @@ Para a paginação da API, basta rodar o seginte comando no terminal.
 python3 paginacao_api.py
 ```
 
-##### Se você gostou desse conteúdo e quer mais, acessem o meu canal no YouTube: Canal [Renato Coelho](https://www.youtube.com/@renato-coelho)
+##### Se você gostou desse conteúdo e quer mais, acesse o meu canal no YouTube: [Canal Renato Coelho](https://www.youtube.com/@renato-coelho)
