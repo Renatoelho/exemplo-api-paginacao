@@ -157,3 +157,5 @@ Para a paginação da API, basta rodar o seginte comando no terminal.
 ```bash
 python3 paginacao_api.py
 ```
+
+##### Se você gostou desse conteúdo e quer mais, acessem o meu canal no YouTube: Canal [Renato Coelho](https://www.youtube.com/@renato-coelho)
