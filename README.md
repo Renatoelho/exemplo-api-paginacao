@@ -14,13 +14,13 @@ Para seguir este tutorial, você precisará ter os seguintes pré-requisitos:
 
 Para criar um ambiente virtual com pip e ativá-lo, siga os seguintes passos:
 
-1. Abra o terminal e crie a diretório *exemplo-api-paginacao* para armazenar o ambiente virtual:
+1. Abra o terminal e crie o diretório ***exemplo-api-paginacao*** para armazenar o ambiente virtual:
 
 ```bash
 mkdir -p exemplo-api-paginacao
 ```
 
-2. acesse o diretorio criada e use o seguinte comando para criar um ambiente virtual:
+2. acesse o diretorio criado e use o seguinte comando para criar um ambiente virtual:
 
 ```bash
 python3 -m venv .venv
@@ -32,7 +32,7 @@ python3 -m venv .venv
 source .venv/bin/python3
 ```
 
-4. Atualize o Pip e instale os requirements, digitar os seguintes comandos:
+4. Atualize o Pip e instale os requirements, digitando os seguintes comandos:
 
 ```bash
 pip install -U pip setuptools wheel
@@ -103,13 +103,14 @@ Para iniciar a API, basta rodar o seginte comando no terminal.
 python3 app.py
 ```
 
-Isso irá iniciar a API em http://localhost:8080/produtos/.
+Isso irá iniciar a API em http://localhost:8080/produtos/
 
 # Para fazer a paginação da API use a biblioteca requests, e crie o arquivo ***python3 paginacao_api.py*** adicionando o seguinte conteúdo:
 
-Importe a biblioteca requests e outras bibliotecas necessárias:
 
 ```python
+
+#Importe a biblioteca requests e outras bibliotecas necessárias:
 
 import requests
 from time import sleep
