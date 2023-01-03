@@ -153,7 +153,7 @@ while True:
 
 Esse código faz um loop infinito que faz chamadas à API, incrementando o parâmetro de paginação a cada iteração. A cada chamada, ele verifica se a resposta tem produtos e, se tiver carrega os dados da resposta e faz algo com eles (no exemplo acima, estamos simplesmente imprimindo os dados na tela). Quando a resposta não tiver mais itens, o loop é interrompido.
 
-Para a paginação da API, basta rodar o seginte comando no terminal.
+Para executar a paginação da API, basta rodar o seginte comando no terminal.
 
 ```bash
 python3 paginacao_api.py
