@@ -3,9 +3,14 @@
 O FastAPI é uma framework para criação de APIs de alta performance em Python. Neste tutorial, vou criar uma API de modelo com recursos de paginação para ensinar como fazer a paginação na prática.
 
 # Pré-requisitos
-Para seguir este tutorial, você precisará ter os seguintes pré-requisitos instalados em sua máquina:
 
-Python 3.8 ou superior e o gerenciador de pacotes pip
+Para seguir este tutorial, você precisará ter os seguintes pré-requisitos:
+
+- Ubuntu 20.04 LTS ou superior
+
+- Python 3.8 ou superior
+
+- gerenciador de pacotes pip
 
 Para criar um ambiente virtual com pip e ativá-lo, siga os seguintes passos:
 
