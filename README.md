@@ -1,26 +1,21 @@
 # Criando uma API de modelo com paginação em FastAPI
 
-O FastAPI é uma framework para criação de APIs de alta performance em Python. Neste tutorial, vamos criar uma API de modelo com recursos de paginação para ensinar como colocar isso em prática.
+O FastAPI é uma framework para criação de APIs de alta performance em Python. Neste tutorial, vou criar uma API de modelo com recursos de paginação para ensinar como fazer a paginação na prática.
 
 # Pré-requisitos
 Para seguir este tutorial, você precisará ter os seguintes pré-requisitos instalados em sua máquina:
 
-Python 3.8 ou superior
-O gerenciador de pacotes pip
-
-```bash
-pip install -r requirements.txt
-```
+Python 3.8 ou superior e o gerenciador de pacotes pip
 
 Para criar um ambiente virtual com pip e ativá-lo, siga os seguintes passos:
 
-1. Abra o terminal e crie a 'exemplo-api-paginacao' pasta para armazenar o ambiente virtual.
+1. Abra o terminal e crie a diretório *exemplo-api-paginacao* para armazenar o ambiente virtual:
 
 ```bash
 mkdir -p exemplo-api-paginacao
 ```
 
-2. acesse a pasta criada e use o seguinte comando para criar um ambiente virtual:
+2. acesse o diretorio criada e use o seguinte comando para criar um ambiente virtual:
 
 ```bash
 python3 -m venv .venv
@@ -32,7 +27,11 @@ python3 -m venv .venv
 source .venv/bin/python3
 ```
 
-4. Instalando os requirements, basta abrir o terminal e digitar o seguinte comando:
+4. Atualize o Pip e instale os requirements, digitar os seguintes comandos:
+
+```bash
+pip install -U pip setuptools wheel
+```
 
 ```bash
 pip install -r requirements.txt
@@ -44,7 +43,7 @@ Isso irá instalar o FastAPI e todas as dependências necessárias.
 
 # Criando a API de Exemplo
 
-Para começar, vamos criar um arquivo chamado app.py e adicionar o seguinte código:
+Para começar, vamos criar um arquivo chamado ***app.py*** e adicionar o seguinte código:
 
 ```python
 
@@ -99,34 +98,26 @@ Para iniciar a API, basta rodar o seginte comando no terminal.
 python3 app.py
 ```
 
-Isso irá iniciar a API em http://localhost:8080.
+Isso irá iniciar a API em http://localhost:8080/produtos/.
 
-# Para fazer a paginação da API use a biblioteca requests, siga os seguintes passos:
+# Para fazer a paginação da API use a biblioteca requests, e crie o arquivo ***python3 paginacao_api.py*** adicionando o seguinte conteúdo:
 
 Importe a biblioteca requests e outras bibliotecas necessárias:
 
 ```python
 
 import requests
-
 from time import sleep
 
-```
-
-Defina a URL da API e o nome do parâmetro de paginação:
-
-```python
+#Defina a URL da API e o nome do parâmetro de paginação:
 
 api_url = "http://localhost:8080/produtos/"
 param_nome = "pagina"
 
-```
-
-Faça um loop para fazer as chamadas de API e pagar os resultados:
-
-```python
+#Faça um loop para fazer as chamadas à API e pagar os resultados:
 
 pagina = 1
+
 while True:
     # Adicione o parâmetro de paginação à URL
     url = f"{api_url}?{param_nome}={pagina}"
@@ -136,6 +127,7 @@ while True:
     
     # Carregue os dados da resposta
     dados = resposta.json()
+
     # Verifique se a resposta tem itens
     if len(dados) == 0:
         break
@@ -149,9 +141,10 @@ while True:
 
     # Aguarda 5 segundos...
     sleep(5)
+
 ```
 
-Esse código faz um loop infinito que faz chamadas à API, incrementando o parâmetro de paginação a cada iteração. A cada chamada, ele verifica se a resposta tem produtos e, se tiver carrega os dados da resposta e faz algo com eles (no exemplo acima, estamos simplesmente imprimindo os dados na tela). Quando a resposta não tem mais itens (por exemplo, quando chegamos à última página), o loop é interrompido.
+Esse código faz um loop infinito que faz chamadas à API, incrementando o parâmetro de paginação a cada iteração. A cada chamada, ele verifica se a resposta tem produtos e, se tiver carrega os dados da resposta e faz algo com eles (no exemplo acima, estamos simplesmente imprimindo os dados na tela). Quando a resposta não tiver mais itens, o loop é interrompido.
 
 Para a paginação da API, basta rodar o seginte comando no terminal.
 
