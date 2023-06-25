@@ -20,11 +20,11 @@ Para criar um ambiente virtual com pip e ativá-lo, siga os seguintes passos:
 mkdir -p exemplo-api-paginacao
 ```
 
-```bash
-mkdir -p exemplo-api-paginacao
-```
+2. acesse o diretorio criado e crie o ambiente virtual:
 
-2. acesse o diretorio criado e use o seguinte comando para criar um ambiente virtual:
+```bash
+cd exemplo-api-paginacao
+```
 
 ```bash
 python3 -m venv .venv
