@@ -20,6 +20,10 @@ Para criar um ambiente virtual com pip e ativá-lo, siga os seguintes passos:
 mkdir -p exemplo-api-paginacao
 ```
 
+```bash
+mkdir -p exemplo-api-paginacao
+```
+
 2. acesse o diretorio criado e use o seguinte comando para criar um ambiente virtual:
 
 ```bash
@@ -143,7 +147,7 @@ while True:
     print(f"Página de produtos número: {pagina} e os produtos são:\n{dados}")
     print("*"*50)
     
-    # Incremente a página para a próxima iteração do loop
+    # Incrementa a página para a próxima iteração do loop
     pagina += 1
 
     # Aguarda 5 segundos...
@@ -153,7 +157,7 @@ while True:
 
 Esse código faz um loop infinito que faz chamadas à API, incrementando o parâmetro de paginação a cada iteração. A cada chamada, ele verifica se a resposta tem produtos e, se tiver carrega os dados da resposta e faz algo com eles (no exemplo acima, estamos simplesmente imprimindo os dados na tela). Quando a resposta não tiver mais itens, o loop é interrompido.
 
-Para executar a paginação da API, basta rodar o seginte comando no terminal.
+Para executar a paginação da API, basta rodar o seginte comando ***EM OUTRO*** terminal.
 
 ```bash
 python3 paginacao_api.py
